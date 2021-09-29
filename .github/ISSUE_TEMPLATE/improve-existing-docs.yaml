@@ -27,7 +27,7 @@ body:
     validations:
       required: true
   - type: dropdown
-    id: version
+    id: oadp-version
     attributes:
       label: OADP Version
       description: What version of our software are you running?
@@ -37,7 +37,7 @@ body:
     validations:
       required: true
   - type: dropdown
-    id: version
+    id: ocp-version
     attributes:
       label: OpenShift Version
       description: What version of OpenShift are you running?
@@ -60,25 +60,25 @@ body:
         To get logs run the following
         `$ oc logs <pod_name> -n openshift-adp`
   - type: textarea
-    id: logs
+    id: velero-logs
     attributes:
       label: Velero pod logs
       description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
       render: shell
   - type: textarea
-    id: logs
+    id: restic-logs
     attributes:
       label: Restic pod logs
       description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
       render: shell
   - type: textarea
-    id: logs
+    id: operator-logs
     attributes:
       label: Operator pod logs
       description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
       render: shell
   - type: checkboxes
-    id: terms
+    id: new-issue
     attributes:
       label: New issue
       description: By submitting this issue, you assert that this issue is new and have not already been filed.
