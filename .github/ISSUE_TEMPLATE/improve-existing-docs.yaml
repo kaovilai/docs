@@ -1,6 +1,6 @@
 name: Bug Report
 description: File a bug report
-title: "default title"
+title: "Bug: "
 labels: ["kind/bug"]
 assignees:
   - octocat
@@ -33,15 +33,6 @@ body:
       description: Also tell us, what did you expect to happen?
       placeholder: A bug happend!
       value: "A bug happened!"
-    validations:
-      required: true
-  - type: textarea
-    id: expected-behavior
-    attributes:
-      label: Expected behavior
-      description: what did you expect to happen?
-      placeholder: X should not happen
-      value: "X should not happen"
     validations:
       required: true
   - type: dropdown
