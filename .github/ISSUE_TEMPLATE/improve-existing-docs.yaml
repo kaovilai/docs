@@ -1,6 +1,6 @@
 name: Bug Report
 description: File a bug report
-title: "Bug: "
+title: "default title"
 labels: ["kind/bug"]
 assignees:
   - octocat
@@ -29,24 +29,59 @@ body:
   - type: dropdown
     id: version
     attributes:
-      label: Version
+      label: OADP Version
       description: What version of our software are you running?
       options:
         - 0.3.x (Beta)
         - 0.2.x (Alpha)
     validations:
       required: true
+  - type: dropdown
+    id: version
+    attributes:
+      label: OpenShift Version
+      description: What version of OpenShift are you running?
+      options:
+        - 4.9
+        - 4.8
+        - 4.7
+        - 4.6
+        - 4.5
+        - 4.4
+        - 4.3
+        - 4.2
+        - 4.1
+        - 4.0
+    validations:
+      required: false
+  - type: markdown
+    attributes:
+      value: |
+        To get logs run the following
+        `$ oc logs <pod_name> -n openshift-adp`
   - type: textarea
     id: logs
     attributes:
-      label: Relevant log output
+      label: Velero pod logs
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      render: shell
+  - type: textarea
+    id: logs
+    attributes:
+      label: Restic pod logs
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      render: shell
+  - type: textarea
+    id: logs
+    attributes:
+      label: Operator pod logs
       description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
       render: shell
   - type: checkboxes
     id: terms
     attributes:
-      label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
+      label: New issue
+      description: By submitting this issue, you assert that this issue is new and have not already been filed.
       options:
-        - label: I agree to follow this project's Code of Conduct
+        - label: This issue is new
           required: true
