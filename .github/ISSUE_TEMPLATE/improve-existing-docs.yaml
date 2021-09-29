@@ -18,12 +18,30 @@ body:
     validations:
       required: false
   - type: textarea
+    id: describe-bug
+    attributes:
+      label: Describe bug
+      description: and also tell us how to reproduce!
+      placeholder: A bug happend when I ate cereal!
+      value: "A bug happend when I ate cereal!"
+    validations:
+      required: true
+  - type: textarea
     id: what-happened
     attributes:
       label: What happened?
       description: Also tell us, what did you expect to happen?
-      placeholder: Tell us what you see!
+      placeholder: A bug happend!
       value: "A bug happened!"
+    validations:
+      required: true
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected behavior
+      description: what did you expect to happen?
+      placeholder: X should not happen
+      value: "X should not happen"
     validations:
       required: true
   - type: dropdown
