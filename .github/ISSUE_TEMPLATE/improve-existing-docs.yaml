@@ -2,8 +2,6 @@ name: Bug Report
 description: File a bug report
 title: "Bug: "
 labels: ["kind/bug"]
-assignees:
-  - octocat
 body:
   - type: markdown
     attributes:
@@ -90,7 +88,7 @@ body:
     id: new-issue
     attributes:
       label: New issue
-      description: By submitting this issue, you assert that this issue is new and have not already been filed.
+      description: By submitting this issue, you assert that this issue is new and [have not already been filed.](https://github.com/openshift/oadp-operator/issues)
       options:
         - label: This issue is new
           required: true
