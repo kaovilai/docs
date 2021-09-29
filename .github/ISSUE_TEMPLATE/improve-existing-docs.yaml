@@ -66,6 +66,8 @@ body:
       value: |
         To get logs run the following
         `$ oc logs <pod_name> -n openshift-adp`
+        Pod names can be found by
+        `$ oc get pods -n openshift-adp`
   - type: textarea
     id: velero-logs
     attributes:
